@@ -13,18 +13,19 @@ function adicionarAmigo() {
 
     amigos.push(nome);
 
+    input.value = "";
+
     exibeListaAmigos();
 
-    input.value = "";
 }
 
 function exibeListaAmigos() {
     let lista = document.getElementById("listaAmigos");
     lista.innerHTML = "";
 
-    amigos.forEach((amigo) => {
+    for (let i = 0; i < amigos.length; i++) {
         let li = document.createElement("li");
-        li.textContent = amigo;
+        li.textContent = amigos[i];
         lista.appendChild(li);
-    });
+    }
 };
