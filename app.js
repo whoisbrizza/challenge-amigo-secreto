@@ -29,3 +29,16 @@ function exibeListaAmigos() {
         lista.appendChild(li);
     }
 };
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("A lista está vazia, não há amigos para sortear.");
+        return;
+    }
+
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    document.getElementById("resultado").innerHTML = `O amigo sorteado é: ${amigoSorteado}`;
+}
